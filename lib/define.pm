@@ -4,7 +4,7 @@ use 5.008004;
 use strict;
 use warnings;
 
-our $VERSION = '1.01';
+our $VERSION = '1.02';
 
 my %AllPkgs;
 my %DefPkgs;
@@ -153,13 +153,14 @@ define - Perl pragma to declare global constants
 
 =head1 DESCRIPTION
 
-This pragma is used to define global constants.
+Use this pragma to define global constants.
 
 =head1 USAGE
 
 =head2 Defining constants
 
-Global constants are defined with the same calling conventions as C<constant.pm>:
+Global constants are defined through the same calling conventions 
+as C<constant.pm>:
 
   use define FOO => 3;
   use define BAR => ( 1, 2, 3 );
@@ -170,13 +171,13 @@ Global constants are defined with the same calling conventions as C<constant.pm>
 
 =head2 Importing constants by name
 
-To use a global constant, you first have to import it into your package:
+To use a global constant, you import it into your package as follows:
 
   no define FOO =>;
 
-This imports FOO into the calling package. If FOO has not been defined, it is
-set to undef. Note that the reason for the '=>' operator is to parse FOO as a
-string literal rather than a bareword (you could also do C<no define 'FOO'>).
+If FOO has been defined, it gets set to its defined value, otherwise it is set
+to undef. Note that the reason for the '=>' operator here is to parse FOO as 
+a string literal rather than a bareword (you could also do C<no define 'FOO'>).
 
 =head2 Importing constants willy-nilly
 
@@ -184,7 +185,7 @@ To import ALL defined constants into your package, you can do the following:
 
   no define;
 
-This is quick, but dirty, as you can't predict what symbols may clash with
+This is quick, but messy, as you can't predict what symbols may clash with
 those in your package's namespace.
 
 =head1 NOTES
