@@ -3,6 +3,7 @@ package define;
 use 5.008004;
 use strict;
 use warnings;
+use Carp qw/ carp croak /;
 
 our $VERSION = '1.02';
 
@@ -29,8 +30,7 @@ sub import {
     }
   }
   else {
-    require Carp;
-    Carp::croak "Must call 'use define' with parameters";
+    croak "Must call 'use define' with parameters";
   }
 }
 
@@ -62,8 +62,7 @@ sub check_name {
   if( $name =~ /^__/ 
       or $name !~ /^_?[^\W_0-9]\w*\z/ 
       or $Forbidden{$name} ) {
-    require Carp;
-    Carp::croak "Define name '$name' is invalid";
+    croak "Define name '$name' is invalid";
   }
 }
 
@@ -85,8 +84,7 @@ sub makedef {
   no strict 'refs';
 
   if (defined *{$subname}{CODE}) {
-    require Carp;
-    Carp::carp "Global constant $subname redefined";
+    carp "Global constant $subname redefined";
   }
 
   if (@Vals > 1) {
