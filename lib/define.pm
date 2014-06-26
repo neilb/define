@@ -92,7 +92,13 @@ sub makedef {
   }
   elsif (@Vals == 1) {
     my $val = $Vals[0];
-    *$subname = sub () { $val };
+
+    if ($val =~ /^[0-9]+$/) {
+        *$subname = eval "sub () { $val }";
+    }
+    else {
+        *$subname = sub () { $val };
+    }
   }
   else {
     *$subname = sub () { };

@@ -3,6 +3,9 @@ Revision history for Perl module define
 1.03 2014-06-27 NEILB
     - Dropped min perl version from 5.8.4 to 5.6.0
     - Switched to Dist::Zilla
+    - Integer constants now defined in a way that will be constant folded
+      by the optimizer. Added simple new test t/scalar.t, which checks that
+      string constants still work.
     - Reformatted this file as per CPAN::Changes::Spec
 
 1.02 2004-09-04 GGUREVICH
