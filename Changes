@@ -8,6 +8,7 @@ Revision history for Perl module define
       string constants still work.
     - Reformatted this file as per CPAN::Changes::Spec
     - Added github repo to pod
+    - Added some links to SEE ALSO
 
 1.02 2004-09-04 GGUREVICH
     - documentation patch

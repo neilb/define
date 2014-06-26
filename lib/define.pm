@@ -194,7 +194,7 @@ those in your package's namespace.
 
 =head1 NOTES
 
-See L<constant/"constant.pm">. Most of the same caveats apply here.
+See L<constant>. Most of the same caveats apply here.
 
 Your code should be arranged so that any C<no define> statements are executed 
 after the C<use define> statement for a given symbol. If the order is reversed,
@@ -207,7 +207,19 @@ If a module does define a global constant (eg. a master object), the module
 should be use'd before any other modules (or lines of code) that refer to the
 constant.
 
-If you <use define> the same symbol more than once, a warning will be emitted.
+If you define the same symbol more than once, a warning will be emitted.
+
+
+=head1 SEE ALSO
+
+L<constant> - core module for defining constants in the same way as
+this module.
+
+L<Const::Fast> - CPAN module for defining immutable variables
+(scalars, hashes, and arrays).
+
+L<constant modules|http://neilb.org/reviews/constants.html> -
+a review of CPAN modules for defining constants.
 
 =head1 REPOSITORY
 
@@ -223,9 +235,5 @@ Copyright (C) 2004 by Gary Gurevich
 
 This library is free software; you can redistribute it and/or modify it under 
 the same terms as Perl itself.
-
-=head1 SEE ALSO
-
-constant(3), perl(1).
 
 =cut
