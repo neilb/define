@@ -5,8 +5,6 @@ use strict;
 use warnings;
 use Carp qw/ carp croak /;
 
-our $VERSION = '1.02';
-
 my %AllPkgs;
 my %DefPkgs;
 my %Vals;
