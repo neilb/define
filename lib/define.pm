@@ -209,6 +209,10 @@ constant.
 
 If you <use define> the same symbol more than once, a warning will be emitted.
 
+=head1 REPOSITORY
+
+L<https://github.com/neilbowers/define>
+
 =head1 AUTHOR
 
   Gary Gurevich (garygurevich at gmail)

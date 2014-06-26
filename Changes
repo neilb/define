@@ -7,6 +7,7 @@ Revision history for Perl module define
       by the optimizer. Added simple new test t/scalar.t, which checks that
       string constants still work.
     - Reformatted this file as per CPAN::Changes::Spec
+    - Added github repo to pod
 
 1.02 2004-09-04 GGUREVICH
     - documentation patch
