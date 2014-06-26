@@ -1,6 +1,7 @@
 Revision history for Perl module define
 
 1.03 2014-06-27 NEILB
+    - Dropped min perl version from 5.8.4 to 5.6.0
     - Switched to Dist::Zilla
     - Reformatted this file as per CPAN::Changes::Spec
 

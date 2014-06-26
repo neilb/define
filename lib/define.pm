@@ -1,6 +1,6 @@
 package define;
 
-use 5.008004;
+use 5.006;
 use strict;
 use warnings;
 use Carp qw/ carp croak /;
