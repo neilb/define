@@ -221,7 +221,7 @@ a review of CPAN modules for defining constants.
 
 =head1 REPOSITORY
 
-L<https://github.com/neilbowers/define>
+L<https://github.com/neilb/define>
 
 =head1 AUTHOR
 
