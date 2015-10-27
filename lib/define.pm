@@ -102,7 +102,7 @@ sub makedef {
     *$subname = sub () { };
   }
 }
-  
+
 1;
 
 __END__
@@ -115,13 +115,13 @@ define - Perl pragma to declare global constants
 
     #--- in package/file main ---#
     package main;
-    
+
     # the most frequenly used application of this pragma
     use define DEBUG => 0;
-    
+
     # define a constant list
     use define DWARVES => qw(happy sneezy grumpy);
-    
+
     # define several at a time via a hashref list, like constant.pm
     use define {
       FOO => 1,
@@ -131,7 +131,7 @@ define - Perl pragma to declare global constants
 
     use Some::Module;
     use My::Module;
-    
+
     #--- in package/file Some::Module ---#
     package Some::Module
     no define DEBUG =>;
@@ -143,7 +143,7 @@ define - Perl pragma to declare global constants
 
     # if DEBUG is false, the following statement isn't even compiled
     warn "debugging stuff here" if DEBUG;
-    
+
     my $title = "Snow white and the " . scalar DWARVES . " dwarves";
 
     #--- in package/file My::Module ---#
